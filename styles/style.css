@@ -18,7 +18,7 @@ body {
   display: inline-flexbox;
   flex-direction: column;
   row-gap: 0;
-  background-color: black;
+  background-color: lightgray;
   color: var(--color-secondary);
   padding: 1rem;
   transition: all 0.5s ease-in-out;
@@ -53,7 +53,7 @@ section {
 .section {
   transform: translateY(-100%) scale(0);
   transition: all 0.4s ease-in-out;
-  background-color: black;
+  background-color: lightgray;
 }
 
 .sec1 {
@@ -103,43 +103,98 @@ section {
 .active {
   display: block;
 }
-.active .maintitle {
+
+/*home page*/
+.maintitle {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 1rem;
   color: black;
   border-radius: 5px;
 }
-.active .maintext {
-  margin-left: 15%;
+.maintitle h1 {
+  margin-bottom: 50px;
+}
+
+.maintext {
+  margin-left: 20%;
   transform: translate(-50% -50%);
   padding-top: 1rem;
 }
-.active .title {
+.maintext .icone {
+  margin-left: 15%;
+  transform: translate(-50% -50%);
+  height: 300px;
+  width: 400px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background-color: none;
+}
+
+.title {
+  padding-top: 1rem;
   margin-right: 25%;
   transform: translate(-50% 50%);
+  color: black;
 }
-.active .container {
+
+/*Site*/
+.container {
   display: grid;
   grid-template-columns: 30% 70%;
+  gap: 2rem;
   height: 100%;
+  padding-top: 10px;
 }
-.active .container .left-container {
+.container .left-site-container {
   display: flex;
   position: relative;
-  margin-left: 10%;
+  margin-left: 0;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
 }
-.active .container .left-container img {
+.container .left-site-container .icone2 {
   width: 100%;
   height: 100%;
   border-radius: 5px;
   object-fit: contain;
+  background-color: #65D6D4;
 }
-.active .container .left-container .right-container {
-  display: flex;
-  justify-content: center;
+.container .right-site-container {
+  display: block;
+  padding-left: 1rem;
+  padding-right: 35px;
+  color: black;
+}
+.container .right-site-container h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.container .right-site-container p {
+  text-align: justify;
+  margin-bottom: 1rem;
 }
 
+/*Dicas*/
+/*Templates*/
+.templates-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.templates-container img {
+  padding: 1rem;
+  width: 100%;
+  height: auto;
+}
+
+/*Criar*/
+.criar-container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  height: 100%;
+}
+
+/* Projeto*/
 .controls {
   display: flex;
   position: absolute;
